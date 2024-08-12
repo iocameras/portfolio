@@ -131,7 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Window fully loaded');
     });
 
-    
+        // ハンバーガーメニュー
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.main-nav');
+      
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          mainNav.classList.toggle('open');
+        });
+      
+        // メニュー項目をクリックしたときにメニューを閉じる
+        const menuItems = mainNav.querySelectorAll('a');
+        menuItems.forEach(item => {
+          item.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mainNav.classList.remove('open');
+          });
+        });
+      });    
 
     // 装飾の不規則なホバリングアニメーション
     const heroDecoration = document.querySelector('.hero-decoration');
