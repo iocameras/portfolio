@@ -7,17 +7,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
     <script src="portfolio.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          console.log('DOM fully loaded');
+          var hamburger = document.querySelector('.hamburger');
+          var mainNav = document.querySelector('.main-nav');
+          console.log('Hamburger:', hamburger);
+          console.log('Main nav:', mainNav);
+          
+          if (hamburger && mainNav) {
+            hamburger.addEventListener('click', function() {
+              console.log('Hamburger clicked');
+              hamburger.classList.toggle('open');
+              mainNav.classList.toggle('open');
+            });
+          } else {
+            console.error('Hamburger or main nav not found');
+          }
+        });
+      </script>
+      
 </head>
 <body>
     <header>
         <div class="logo">IKUMI OGAWARA</div>
-        <nav>
-            <a href="#works">Works</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="https://www.instagram.com/iocameras?igsh=MWVkeWUxbWVjaWM0Ng==">Instagaram</a>
-            <a href="#contact"><strong>Contact</strong></a>
+        <nav class="main-nav">
+            <ul>
+              <li><a href="#works">Works</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="https://www.instagram.com/iocameras/">Instagram</a></li>
+              <li><strong><a href="#contact">Contact</a></strong></li>
+            </ul>
         </nav>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <section class="hero">
