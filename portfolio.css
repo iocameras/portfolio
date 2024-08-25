@@ -437,6 +437,7 @@ header {
 .mail-icon {
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    align-item: center;
 }
 
 .mail-icon:hover {
@@ -444,7 +445,7 @@ header {
 }
 
 .contact-info {
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
