@@ -422,47 +422,51 @@ header {
 
 
 .contact {
-    padding: 80px 40px;
+    padding: 40px 20px;
+    background-color: var(--secondary-color);
+}
+
+.contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.contact form {
-    width: 100%;
-    max-width: 600px;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 15px;
+.mail-icon {
     margin-bottom: 20px;
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 16px;
+    transition: transform 0.3s ease;
 }
 
-.contact input::placeholder, .contact textarea::placeholder {
-    color: rgba(255,255,255,0.7);
+.mail-icon:hover {
+    transform: scale(1.1);
 }
 
-.contact button {
-    width: 200px;
-    padding: 15px;
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.contact-info {
+    text-align: left;
+    width: 100%;
 }
 
-.contact button:hover {
-    background-color: #ffffff;
+.contact-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .contact-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .mail-icon {
+        margin-right: 40px;
+        margin-bottom: 0;
+    }
 }
 
 #cursor{
